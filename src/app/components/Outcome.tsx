@@ -38,8 +38,10 @@ async function Outcome() {
             <h1 className='lg:bold-40 bold-32 mb-4'>{data.heading}</h1>
             <p className='lg:text-[1rem] text-[0.9rem] text-muted-foreground '>{data.para}</p>
             <div className='grid sm:grid-cols-2 grid-cols-1 mt-6 gap-x-4 gap-y-6'>
-                {data.outcomes.map((outcome)=>(
-                    <div className='flex gap-5'>
+                {data.outcomes.map((outcome, i)=>(
+                    <div 
+                    key={i}
+                    className='flex gap-5'>
                         <ImRadioChecked2 className='text-[#00616c] w-5 h-5'/>
                         <p className='font-semibold'>{outcome}</p>
                     </div>
